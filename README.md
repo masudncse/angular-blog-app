@@ -34,6 +34,6 @@ This is a simple and complete blog application by using angular.
 - Protect Route / Guard Authentication
 
 ## Screenshots
-![1](https://github.com/masudncse/blog-html-layout-3/blob/master/screenshots/1.png)
-![2](https://github.com/masudncse/blog-html-layout-3/blob/master/screenshots/2.png)
-![3](https://github.com/masudncse/blog-html-layout-3/blob/master/screenshots/3.png)
+![1](https://github.com/masudncse/angular-blog-app/blob/master/screenshots/1.png)
+![2](https://github.com/masudncse/angular-blog-app/blob/master/screenshots/2.png)
+![3](https://github.com/masudncse/angular-blog-app/blob/master/screenshots/3.png)
