@@ -1,0 +1,7 @@
+<div class="collection" style="margin-top: 0;">
+  <a class="collection-header" style="color: #555555">
+    <h4 style="margin-left: 20px; font-size: 26px; font-weight: 300;">All Categories</h4>
+  </a>
+  <p class="divider"></p>
+  <a *ngFor="let category of categories" [routerLink]="['/category', category.id]" routerLinkActive="active" class="collection-item">{{ category.name }}</a>
+</div>

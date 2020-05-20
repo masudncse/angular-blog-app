@@ -1,27 +1,39 @@
-# AngularBlogApp
+# Angular Blog App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.5.
+This is a simple and complete blog application by using angular.
 
-## Development server
+## Technology
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Angular - Frontend
+- Laravel + SQLite - Backend
+- Node.js + Mongodb - Backend
 
-## Code scaffolding
+`Here we used laravel and node.js for making api app separately but api url is same. I wanted to do more practice on both technologies`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Features
 
-## Build
+- Layout
+- Components
+- Assets
+- Routing
+- Services
+- Directives
+- HostListener
+- Pipes
+- HttpClient
+- Jwt Auth
+- CRUD System
+- Meta Tags
+- Dynamic Title
+- SEO Friendly Source
+- Component Communication
+- Reactive & Template Driven Form
+- Material Design Implement
+- Form Validation
+- Share Data or Global Storage
+- Protect Route / Guard Authentication
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Screenshots
+![1](https://github.com/masudncse/blog-html-layout-3/blob/master/screenshots/1.png)
+![2](https://github.com/masudncse/blog-html-layout-3/blob/master/screenshots/2.png)
+![3](https://github.com/masudncse/blog-html-layout-3/blob/master/screenshots/3.png)

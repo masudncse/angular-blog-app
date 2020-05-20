@@ -1,0 +1,18 @@
+<table class="homeTable">
+    <tbody>
+        <tr>
+            <td class="center">
+                <img src="assets/img/yuna.jpg" alt="" class="responsive-img" />
+
+                <h5 style="margin-bottom: 0;">
+                    {{post.title}}
+                </h5>
+
+                <p style="margin-top: 0;">
+                    {{post.content}}
+                </p>
+                <p>Category: <a [routerLink]="['/category', post.category?post.category.id:'']">{{post.category?post.category.name:''}}</a> | Published: {{post.created_at | date:'d MMM, yyyy'}}</p>
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,156 @@
+<table class="striped">
+  <caption
+    style="font-size: 25px; margin-bottom: 10px; text-transform: uppercase;"
+  >
+    ALL Posts
+  </caption>
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Category</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let post of posts">
+      <td>
+        <img
+          src="assets/img/yuna.jpg"
+          width="50"
+          alt=""
+          class="circle responsive-img"
+        />
+      </td>
+      <td>
+        {{ post.title }}
+      </td>
+      <td>
+        {{ post.contents }}
+      </td>
+      <td>
+        {{ post.category.name }}
+      </td>
+      <td style="width: 150px;">
+        <a class="waves-effect waves-light btn">
+          <i class="material-icons">edit</i></a
+        >
+        <a class="waves-effect waves-light btn red">
+          <i class="material-icons" (click)="deletePost(post.id)"
+            >delete_forever</i
+          ></a
+        >
+      </td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="5" class="center" style="padding-top: 50px;">
+        <button
+          type="button"
+          data-target="modal1"
+          class="btn-floating btn-large btn modal-trigger pulse grey"
+        >
+          <i class="material-icons">add</i>
+        </button>
+      </td>
+    </tr>
+  </tfoot>
+</table>
+
+<!-- Modal Structure -->
+<div id="modal1" class="modal modal1">
+  <div class="modal-content">
+    <div class="row">
+      <h4 class="col s12">Add Post</h4>
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s12">
+            <select
+              name="category_id"
+              [(ngModel)]="post.category_id"
+              #category_id="ngModel"
+            >
+              <option value="" disabled selected>Select a category</option>
+              <option
+                *ngFor="let category of categories"
+                [ngValue]="category.id"
+                >{{ category.name }}</option
+              >
+            </select>
+            <label>Select Category</label>
+            <div
+              *ngIf="
+                category_id.invalid &&
+                (category_id.dirty || category_id.touched)
+              "
+              class="alert alert-danger"
+            >
+              <div *ngIf="category_id.errors.required">
+                Category is required.
+              </div>
+            </div>
+          </div>
+          <div class="input-field col s12">
+            <input
+              id="title"
+              name="title"
+              [(ngModel)]="post.title"
+              #title="ngModel"
+              type="text"
+              class="validate"
+            />
+            <label for="title">Enter post title</label>
+            <div
+              *ngIf="title.invalid && (title.dirty || title.touched)"
+              class="alert alert-danger"
+            >
+              <div *ngIf="title.errors.required">
+                Title is required.
+              </div>
+            </div>
+          </div>
+          <div class="input-field col s12">
+            <textarea
+              id="contents"
+              name="contents"
+              [(ngModel)]="post.contents"
+              #contents="ngModel"
+              class="materialize-textarea"
+            ></textarea>
+            <label for="contents">Enter post description</label>
+            <div
+              *ngIf="contents.invalid && (contents.dirty || contents.touched)"
+              class="alert alert-danger"
+            >
+              <div *ngIf="contents.errors.required">
+                Contents is required.
+              </div>
+            </div>
+          </div>
+          <div class="file-field input-field col s12">
+            <div class="btn">
+              <span>Image</span>
+              <input type="file" />
+            </div>
+            <div class="file-path-wrapper">
+              <input class="file-path validate" type="text" />
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class="modal-close waves-effect waves-green btn-flat"
+      >Cancel</a
+    >
+    <a
+      href="#!"
+      class="waves-effect waves-green btn-flat"
+      onclick="M.toast({html: 'I am a toast!'})"
+      >Submit</a
+    >
+  </div>
+</div>

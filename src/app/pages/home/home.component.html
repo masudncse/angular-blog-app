@@ -1,0 +1,23 @@
+<table class="striped homeTable">
+  <tbody>
+    <tr *ngFor="let post of posts">
+      <td>
+        <img src="assets/img/yuna.jpg" width="100" alt="" class="circle responsive-img" />
+      </td>
+      <td>
+        <a [routerLink]="['/single', post.id]">
+          <h5 style="margin-bottom: 0;">
+            {{post.title}}
+          </h5>
+        </a>
+        <p style="margin-top: 0;">
+          {{post.content}}
+        </p>
+        <p>
+          Category: <a [routerLink]="['/category', post.category?post.category.id:'']">{{post.category?post.category.name:''}}</a> | Published: {{post.created_at | date:'d MMM, yyyy'}}
+          <a [routerLink]="['/single', post.id]" class="right">READ MORE</a>
+        </p>
+      </td>
+    </tr>
+  </tbody>
+</table>
